@@ -1,0 +1,65 @@
+---
+layout: splash
+---
+<!--
+<div class="home">
+
+    <p>{{- site.description | escape -}}</p>
+
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div> -->
+
+<!-- TODO: make this something other than a basic splash page -->
+
+<div id="splash">
+
+    <img src="/assets/img/banner_map.webp" />
+    <h1>The Tyne & Wear Heritage Forum</h1>
+
+    <p>The Tyne & Wear Heritage Forum was formed in 2015 by
+    representatives of local heritage groups active within the North-East of
+    England. These groups celebrate the period of industrialization associated with
+    Tyne & Wear, County Durham and Northumberland, when the region was at the
+    forefront of world development during the period of the industrial
+    revolution.</p>
+    
+    <p>The TWHF is an alliance of key heritage bodies and individuals active
+    within the North-East of England. At a time of restricted public funding for 
+    protection and preservation of heritage, the Forum seeks to make a tangible
+    and significant impact on the regional environment to the benefit of those
+    who live and work here.</p>
+
+    <div id="construction">
+        <h3>We're currently rebuilding our website.</h3>
+        <p>If you have any queries or would like to get involved with the TWHF,
+        please contact the forum Chair, John Daniels, at <a href="mailto:johnmichaeldaniels@gmail.com">johnmichaeldaniels@gmail.com</a></p>
+    </div>
+    
+</div>
