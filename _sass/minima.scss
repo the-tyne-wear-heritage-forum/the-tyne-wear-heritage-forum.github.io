@@ -86,16 +86,16 @@ $on-laptop:        100% !default;
 .parallax-container h1 {
   position: absolute;
   bottom: 88px;
-  left: 20%;
+  left: 23%;
   z-index: 1;
   color: white;
-  text-shadow: 2px 2px 4px #111;
+  text-shadow: 1px 1px 3px #111;
   font-size: 32pt;
 }
 
 .content-body {
   background-color: #fff !important;
-  width: 60%;
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
@@ -132,6 +132,29 @@ $on-laptop:        100% !default;
   background: white;
 }
 
+.site-footer {
+  padding: 30px;
+}
+
+.site-footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer-right {
+  width: 25%;
+  text-align: center;
+  float: right;
+  padding-right: 25%;
+}
+
+.footer-left {
+  width: 25%;
+  text-align: center;
+  float: left;
+  padding-left: 25%;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -142,9 +165,70 @@ $on-laptop:        100% !default;
   padding-top: 60px;
 }
 
+.u-inlineBlock {
+  font-size: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.twitter-feed {
+  width: 45%;
+  float: right;
+  padding: 12px;
+}
+
+.latest-blog {
+  width: 45%;
+  float: left;
+  padding: 12px;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.preview-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.preview-detail {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 10px;
+  margin: -5px 0px -5px 0px;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 1450px) {
+  .content-body {
+    width: 60%;
+  }
+
+  .parallax-container h1 {
+    font-size: 30pt;
+    left: initial;
+    text-align: center;
+    width:100%;
+  }
+}
+
 @media only screen and (max-width: 1250px) {
   .content-body {
     width: 70%;
+  }
+
+  .footer-left {
+    width: 50%;
+    padding-left: 0%;
+  }
+
+  .footer-right {
+    width: 50%;
+    padding-right: 0%;
   }
 }
 
@@ -154,12 +238,16 @@ $on-laptop:        100% !default;
     margin-top: -80px;
   }
 
-  .parallax-container h1 {
-    width:100%;
-    font-size: 30pt;
-    left: initial;
-    text-align: center;
+  .twitter-feed {
+    width: 100%;
+    float: initial;
   }
+  
+  .latest-blog {
+    width: 100%;
+    float: initial;
+  }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -215,6 +303,19 @@ $on-laptop:        100% !default;
   .trigger {
     align-content: center;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {  
+  .footer-left {
+    width: 100%;
+    float: initial;
+  }
+
+  .footer-right {
+    width: 100%;
+    float: initial;
+    margin-top: 25px;
   }
 }
 
