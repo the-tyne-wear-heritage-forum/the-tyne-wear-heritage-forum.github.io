@@ -25,20 +25,25 @@ layout: home
     impact on the regional environment to the benefit of those who live and work
     here.</p>
     </div>
-    <div class="latest-blog">
-        <h3>Latest Blog Post</h3>
-        {% for post in site.posts limit:1 %}
-            <h4 class="preview-title">{{post.title}}</h4>
-            <p class="preview-detail">{{post.author}} | {{post.date | date: "%-d %B %Y"}}</p>
-            <p>{{post.excerpt}} <a href="{{ post.url }}">Read more</a></p>
-        {% endfor %}
+    <div class="section">
+        <div class="latest-blog">
+            <h3>Latest Blog Post</h3>
+            {% for post in site.posts limit:1 %}
+                <h4 class="preview-title">{{post.title}}</h4>
+                <p class="preview-detail">{{post.author}} | {{post.date | date: "%-d %B %Y"}}</p>
+                <p>{{post.excerpt}} <a href="{{ post.url }}">Read more</a></p>
+            {% endfor %}
+        </div>
+        <div class="twitter-feed">
+            <h3>Latest Tweet</h3>
+            <a class="twitter-timeline" href="https://twitter.com/TWHeritageForum" 
+                    data-chrome="noheader nofooter noborders transparent noscrollbar" 
+                    data-tweet-limit="1" dnt="true">Tweets by Tyne & Wear Heritage Forum</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <br/>
+                    <br/>
+        </div>
     </div>
-    <div class="twitter-feed">
-        <h3>Latest Tweet</h3>
-        <a class="twitter-timeline" href="https://twitter.com/TWHeritageForum" 
-                data-chrome="noheader nofooter noborders transparent noscrollbar" 
-                data-tweet-limit="1" dnt="true">Tweets by Tyne & Wear Heritage Forum</a>
-                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+    <div class="section"></div>
 </div>
 

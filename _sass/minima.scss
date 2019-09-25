@@ -171,6 +171,8 @@ $on-laptop:        100% !default;
 
 .section {
   margin-bottom: 30px;
+  min-height: 50px;
+  width: 100%;
 }
 
 .twitter-feed {
@@ -201,6 +203,11 @@ h3 {
   line-height: 10px;
   margin: -5px 0px -5px 0px;
   padding: 0px;
+}
+
+.latest-updates {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1450px) {
