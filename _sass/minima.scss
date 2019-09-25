@@ -86,11 +86,14 @@ $on-laptop:        100% !default;
 .parallax-container h1 {
   position: absolute;
   bottom: 88px;
-  left: 23%;
   z-index: 1;
   color: white;
   text-shadow: 1px 1px 3px #111;
   font-size: 32pt;
+  background: rgba(0,0,0,.28);
+  font-size: 30pt;
+  text-align: center;
+   width:100%;
 }
 
 .content-body {
@@ -208,6 +211,38 @@ h3 {
 .latest-updates {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.dynamichalf {
+  width: 50%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crop {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.cropTitle {
+  position: relative;
+  bottom: 80px;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 3px #111;
+  font-size: 18pt;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,.28);
+}
+
+.crop img {
+  min-width: 100%;
+  min-height: 250px;
+  align-content: center;
+  margin: -75px 0 0 -10px;
 }
 
 @media only screen and (max-width: 1450px) {

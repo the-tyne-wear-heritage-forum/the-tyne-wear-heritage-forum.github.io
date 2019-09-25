@@ -36,6 +36,11 @@ navigation:
 - title: "Contact"
   url: "/contact"
 
+collections:
+- casestudies
+- heritage_act
+
+
 # Build settings
 markdown: kramdown
 theme: minima
