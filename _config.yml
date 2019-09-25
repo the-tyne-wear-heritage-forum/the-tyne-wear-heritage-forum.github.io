@@ -26,6 +26,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+navigation:
+- title: "About"
+  url: "/about"
+- title: "Case Studies"
+  url: "/cases"
+- title: "Blog"
+  url: "/blog"
+- title: "Contact"
+  url: "/contact"
+
 # Build settings
 markdown: kramdown
 theme: minima
