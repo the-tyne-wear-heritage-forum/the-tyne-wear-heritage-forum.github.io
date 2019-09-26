@@ -37,8 +37,14 @@ navigation:
   url: "/contact"
 
 collections:
-- casestudies
-- heritage_act
+  casestudies:
+    title: "Case Studies"
+    output: true
+    permalink: /casestudies/:path/
+  heritage_act:
+    title: "HeritageAct!"
+    output: true
+    permalink: /heritageact/:path/
 
 
 # Build settings

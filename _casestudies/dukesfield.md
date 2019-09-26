@@ -12,6 +12,6 @@ The Dukesfield Smelters and Carriers Project found some of these long hidden sto
 
 Our video summarises the achievements of our project – we’re very proud!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fd8-fkoD4Bk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Fd8-fkoD4Bk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In May 2015 we were Highly Commended in second place in the Heritage category of the Constructing Excellence North East #CENEAwards2015 Pipped to the post by Dunston Staiths, but ahead of projects at Hexham Abbey, Newcastle’s Exhibition Park, Newcastle Central Station and the Tees Transporter Bridge.

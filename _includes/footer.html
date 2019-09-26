@@ -34,5 +34,19 @@ var customizeTweetMedia = function () {
     $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('line-height', '1.6');
     $('.twitter-feed').find('.twitter-timeline').contents().find('ul.timeline-tweet-actions').css('display', 'none');
 }
+
+$(function(){
+   // See if this is a touch device
+   if ('ontouchstart' in window)
+   {
+      // Set the correct [touchscreen] body class
+      $('body').removeClass('no-touch').addClass('touch');
+     
+      // Add the touch toggle to show text when tapped
+      $('div.boxInner img').click(function(){
+         $(this).closest('.boxInner').toggleClass('touchFocus');
+      });
+   }
+});
   
 </script>
