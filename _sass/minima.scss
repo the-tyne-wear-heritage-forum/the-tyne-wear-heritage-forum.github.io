@@ -322,7 +322,7 @@ h3 {
   }
 
   .parallax-container h1 {
-    font-size: 27pt;
+    font-size: 26pt;
   }
 
   .box {
@@ -331,13 +331,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .parallax-container h1 {
-    font-size: 26pt;
-  }
-}
-
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 840px) {
   .parallax-container h1 {
     visibility: hidden;
   }

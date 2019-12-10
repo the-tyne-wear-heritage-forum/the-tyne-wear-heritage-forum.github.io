@@ -8,7 +8,7 @@ layout: home
 <div class="parallax-container">
     <div class="parallax">
     <h1>The Tyne & Wear Heritage Forum</h1>
-    <img src="/assets/img/litphil.webp">    
+    <img src="/assets/img/fenwick.webp">    
     </div>
 </div>
 
