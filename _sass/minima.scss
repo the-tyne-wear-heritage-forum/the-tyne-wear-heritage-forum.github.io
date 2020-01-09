@@ -373,6 +373,22 @@ h4 {
     align-content: center;
     text-align: center;
   }
+
+  .feature-photo {
+    display: block;
+    max-width: 90%;
+    max-height: 30vh; 
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    float:none;
+  }
+
+  .secondary-photo {
+    width: auto;
+    max-width: 90%;
+    max-height: 30vh;    
+  }
 }
 
 @media only screen and (max-width: 500px) {  
@@ -386,9 +402,30 @@ h4 {
     float: initial;
     margin-top: 25px;
   }
+
+  .feature-photo {
+    max-width: 90%;
+  }
+
+  .secondary-photo {
+    max-width: 90%;
+  }
+
+  .content-body {
+    padding: 10px 20px 10px 20px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
+
+  .latest-blog {
+    padding: 0px;
+  }
+
+  .twitter-feed {
+    padding: 0px;
+  }
+
   .parallax-container h1 {
     visibility: hidden;
   }
