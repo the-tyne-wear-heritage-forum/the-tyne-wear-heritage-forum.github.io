@@ -24,6 +24,7 @@ layout: home
     preservation of heritage, the Forum seeks to make a tangible and significant
     impact on the regional environment to the benefit of those who live and work
     here.</p>
+    <p>Through the <em>HeritageAct!</em> initiative, we aim to help local heritage groups and individuals learn the skills required to develop, finance and deliver heritage conservation and interpretation. Visit the <a href="/heritageAct"><em>HeritageAct!</em> page</a> for more information and see some of the projects that we've worked on.</p>
     </div>
     <div class="section">
         <div class="latest-blog">

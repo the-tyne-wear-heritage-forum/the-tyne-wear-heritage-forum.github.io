@@ -78,14 +78,14 @@ $on-laptop:        100% !default;
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 550px;
+  height: 75vh;
   z-index: -1;
   width: 100%;
 }
 
 .parallax-container h1 {
   position: absolute;
-  bottom: 88px;
+  bottom: 140px;
   z-index: 1;
   color: white;
   text-shadow: 1px 1px 3px #111;
@@ -98,11 +98,11 @@ $on-laptop:        100% !default;
 
 .content-body {
   background-color: #fff !important;
-  width: 55%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
-  margin-top: -88px;
+  padding: 40px;
+  margin-top: -140px;
   min-height: 350px;
 }
 
@@ -195,6 +195,11 @@ $on-laptop:        100% !default;
 h3 {
   width: 100%;
   text-align: center;
+}
+
+h4 {
+  font-weight: 700;
+  color: #494949
 }
 
 .preview-title {

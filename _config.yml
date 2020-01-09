@@ -27,8 +27,8 @@ twitter_username: TWHeritageForum
 github_username:  GSDan
 
 navigation:
-- title: "Case Studies"
-  url: "/cases"
+- title: "Home"
+  url: "/"
 - title: "HeritageAct!"
   url: "/heritageAct"
 - title: "Blog"
