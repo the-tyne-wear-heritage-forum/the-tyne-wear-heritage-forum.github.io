@@ -21,10 +21,10 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    900px !default;
+$content-width:    100% !default;
 
-$on-palm:          600px !default;
-$on-laptop:        900px !default;
+$on-palm:          100% !default;
+$on-laptop:        100% !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -50,31 +50,360 @@ $on-laptop:        900px !default;
   "minima/syntax-highlighting"
 ;
 
-#splash img {
-  padding-top: 7%;
+.header-wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
 
-#splash h1{
+.wrapper {
+  padding: 0px;
+  margin:0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 75vh;
+  z-index: -1;
+  width: 100%;
+}
+
+.parallax-container h1 {
+  position: absolute;
+  bottom: 140px;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 3px #111;
+  font-size: 32pt;
+  background: rgba(0,0,0,.28);
+  font-size: 30pt;
   text-align: center;
-  width:75%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 8px;
-  border-bottom: 1px solid #e8e8e8;
+   width:100%;
 }
 
-#splash p {
-  text-align: justify;
-  font-size: 16px;
-  color: #404040;
+.content-body {
+  background-color: #fff !important;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  margin-top: -140px;
+  min-height: 350px;
 }
 
-#construction {
-  margin-top: 35px;
-  width:75%;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallax img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  //min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.site-header {
+  background: white;
+}
+
+.site-footer {
+  padding: 30px;
+}
+
+.site-footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer-right {
+  width: 25%;
+  text-align: center;
+  float: right;
+  padding-right: 25%;
+}
+
+.footer-left {
+  width: 25%;
+  text-align: center;
+  float: left;
+  padding-left: 25%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.u-inlineBlock {
+  font-size: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+  min-height: 50px;
+  width: 100%;
+}
+
+.twitter-feed {
+  width: 45%;
+  float: right;
+  padding: 12px;
+}
+
+.latest-blog {
+  width: 45%;
+  float: left;
+  padding: 12px;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 700;
+  color: #494949
+}
+
+.preview-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.preview-detail {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 10px;
+  margin: -5px 0px -5px 0px;
+  padding: 0px;
+}
+
+.latest-updates {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.box {
+  float: left;
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+}
+
+.boxInner {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden;
+}
+
+.boxInner img {
+  width: 100%;
+}
+
+.boxInner .titleBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.65);
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.feature-photo {
+  float: left;
+  max-width: 33%;
+  max-height: 33%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.secondary-photo {
+  display: block;
+  width: 40%;
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  p, h3 {
+}
+
+@media only screen and (max-width: 1450px) {
+  .content-body {
+    width: 60%;
+  }
+
+  .parallax-container h1 {
+    font-size: 30pt;
+    left: initial;
     text-align: center;
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .content-body {
+    width: 70%;
+  }
+
+  .footer-left {
+    width: 50%;
+    padding-left: 0%;
+  }
+
+  .footer-right {
+    width: 50%;
+    padding-right: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content-body {
+    width: 80%;
+    margin-top: -80px;
+  }
+
+  .twitter-feed {
+    width: 100%;
+    float: initial;
+  }
+  
+  .latest-blog {
+    width: 100%;
+    float: initial;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .content-body {
+    width: 85%;
+    margin-top: -100px;
+  }
+
+  .parallax-container h1 {
+    font-size: 26pt;
+  }
+
+  .box {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .parallax-container h1 {
+    visibility: hidden;
+  }
+
+  .content-body {
+    margin-top: -150px;
+  }
+
+  .parallax-container {
+    height: 250px;
+  }
+
+  .content-body {
+    margin-top: -30px;
+  }
+
+  .sticky {
+    position: relative;
+  }
+
+  .site-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-nav {
+    align-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trigger {
+    align-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {  
+  .footer-left {
+    width: 100%;
+    float: initial;
+  }
+
+  .footer-right {
+    width: 100%;
+    float: initial;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .parallax-container h1 {
+    visibility: hidden;
+  }
+
+  .header-wrapper {
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .box {
+    width: 80%;
+    padding-bottom: 80%;
+    padding-left: 20%;
   }
 }

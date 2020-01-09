@@ -1,35 +1,52 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <div class="footer-left">
+      <h5>Follow the TWHF:</h5>
+      <ul>
+          <li><a href="https://www.twitter.com/TWHeritageForum"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">TWHeritageForum</span></a></li>
+          <li><a href="https://github.com/TyneWearHeritageForum"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">TyneWearHeritageForum</span></a></li>
+      </ul>
+  </div>
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        
-      </div>
-    </div>
-
+  <div class="footer-right">
+    <h5>Designed by Dan Richardson</h5>
+    <ul>
+      <li><a href="https://www.twitter.com/GSDan"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">GSDan</span></a></li>
+      <li><a href="https://github.com/GSDan"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">GSDan</span></a></li>
+    </ul>
   </div>
 
 </footer>
+
+<script>
+  $('.parallax').parallax();
+
+  $('.twitter-feed').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
+    customizeTweetMedia();
+});
+
+var customizeTweetMedia = function () {
+    // CSS Overrides
+    $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-media').css('display', 'none');
+    $('.twitter-feed').find('.twitter-timeline').contents().find('span.TweetAuthor-screenName').css('font-size', '16px');
+    $('.twitter-feed').find('.twitter-timeline').contents().find('span.TweetAuthor-screenName').css('font-family', 'Raleway');    
+    $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('font-family', 'Helvetica');
+    $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('font-size', '16px');
+    $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('line-height', '1.6');
+    $('.twitter-feed').find('.twitter-timeline').contents().find('ul.timeline-tweet-actions').css('display', 'none');
+}
+
+$(function(){
+   // See if this is a touch device
+   if ('ontouchstart' in window)
+   {
+      // Set the correct [touchscreen] body class
+      $('body').removeClass('no-touch').addClass('touch');
+     
+      // Add the touch toggle to show text when tapped
+      $('div.boxInner img').click(function(){
+         $(this).closest('.boxInner').toggleClass('touchFocus');
+      });
+   }
+});
+  
+</script>
