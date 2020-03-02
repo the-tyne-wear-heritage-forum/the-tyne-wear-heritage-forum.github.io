@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 // Define defaults for each variable.
 
@@ -78,22 +78,22 @@ $on-laptop:        100% !default;
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 75vh;
+  height: 65vh;
   z-index: -1;
   width: 100%;
 }
 
-.parallax-container h1 {
-  position: absolute;
-  bottom: 140px;
-  z-index: 1;
-  color: white;
-  text-shadow: 1px 1px 3px #111;
-  font-size: 32pt;
-  background: rgba(0,0,0,.28);
-  font-size: 30pt;
-  text-align: center;
-   width:100%;
+.parallax-header {
+    position: absolute;
+    bottom: 140px;
+    z-index: 1;
+    color: white;
+    text-shadow: 1px 1px 3px #111;
+    font-size: 32pt;
+    background: rgba(0,0,0,.38);
+    font-size: 30pt;
+    text-align: center;
+    width: 100%;
 }
 
 .content-body {
@@ -202,6 +202,24 @@ h4 {
   color: #494949
 }
 
+.intropara {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h4 {
+    margin-bottom: 3px;
+}
+
+.event p {
+    margin-bottom: 1px;
+}
+
 .preview-title {
   font-weight: 600;
   font-size: 18px;
@@ -257,6 +275,10 @@ h4 {
   transition: all 0.3s ease-out;
 }
 
+.post-details {
+    font-style:oblique;
+}
+
 .feature-photo {
   float: left;
   max-width: 33%;
@@ -271,6 +293,14 @@ h4 {
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.mobile-header {
+    visibility: hidden;
+    text-align: center;
+    font-size: large;
+    font-weight:bold;
+    margin: -7px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -340,6 +370,12 @@ h4 {
   .parallax-container h1 {
     visibility: hidden;
   }
+
+  .mobile-header {
+      visibility: visible;
+      margin: 10px;
+  }
+
 
   .content-body {
     margin-top: -150px;
@@ -424,10 +460,6 @@ h4 {
 
   .twitter-feed {
     padding: 0px;
-  }
-
-  .parallax-container h1 {
-    visibility: hidden;
   }
 
   .header-wrapper {

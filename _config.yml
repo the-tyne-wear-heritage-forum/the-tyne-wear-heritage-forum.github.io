@@ -33,18 +33,18 @@ navigation:
   url: "/heritageAct"
 - title: "Blog"
   url: "/blog"
-- title: "Contact"
-  url: "/contact"
+- title: "Events"
+  url: "/events"
 
 collections:
   casestudies:
     title: "Case Studies"
     output: true
     permalink: /casestudies/:path/
-  heritage_act:
-    title: "HeritageAct!"
-    output: true
-    permalink: /heritageact/:path/
+  events:
+    title: "Events"
+    output: false
+
 
 
 # Build settings

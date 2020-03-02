@@ -7,7 +7,7 @@ layout: home
 
 <div class="parallax-container">
     <div class="parallax">
-    <h1>HeritageAct!</h1>
+    <h1 class="parallax-header">HeritageAct!</h1>
     <img src="/assets/img/charlton.webp">    
     </div>
 </div>
