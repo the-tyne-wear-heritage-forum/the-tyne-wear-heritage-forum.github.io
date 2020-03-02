@@ -1,27 +1,49 @@
----
-layout: default
----
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+  {%- include head.html -%}
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+<body>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- include header.html -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+    <main class="home-content" aria-label="Content">
+        <div class="wrapper">
+            <div class="parallax-container">
+                <div class="parallax">
+                    <h1 class="parallax-header">{{ page.title }}</h1>
+                    <img src="/assets/img/blog.webp">
+                </div>
+            </div>
+            <div class="content-body">
+
+                <p class="mobile-header">{{ page.title }}</p>
+                {%- if page.image -%}
+                <img src="{{ page.image }}" class="feature-photo" />
+                {%- endif -%}
+                <p class="post-details">
+                    Posted by {{page.author}} on
+                    {% assign d = page.date | date: "%-d"  %}
+                    {% case d %}
+                    {% when '1' or '21' or '31' %}{{ d }}st
+                    {% when '2' or '22' %}{{ d }}nd
+                    {% when '3' or '23' %}{{ d }}rd
+                    {% else %}{{ d }}th
+                    {% endcase %}
+                    {{ page.date | date: "%B, %Y" }}
+                </p>
+                {{ content }}
+                {%- if page.image2 -%}
+                <img src="{{ page.image2 }}" class="secondary-photo" />
+                {%- endif -%}
+
+                <a href="/blog">&larr; View all posts</a>
+            </div>
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+
+</body>
+
+</html>

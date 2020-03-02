@@ -90,7 +90,7 @@ $on-laptop:        100% !default;
     color: white;
     text-shadow: 1px 1px 3px #111;
     font-size: 32pt;
-    background: rgba(0,0,0,.28);
+    background: rgba(0,0,0,.38);
     font-size: 30pt;
     text-align: center;
     width: 100%;
@@ -275,6 +275,10 @@ h4 {
   transition: all 0.3s ease-out;
 }
 
+.post-details {
+    font-style:oblique;
+}
+
 .feature-photo {
   float: left;
   max-width: 33%;
@@ -289,6 +293,14 @@ h4 {
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.mobile-header {
+    visibility: hidden;
+    text-align: center;
+    font-size: large;
+    font-weight:bold;
+    margin: -7px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -358,6 +370,12 @@ h4 {
   .parallax-container h1 {
     visibility: hidden;
   }
+
+  .mobile-header {
+      visibility: visible;
+      margin: 10px;
+  }
+
 
   .content-body {
     margin-top: -150px;
@@ -442,10 +460,6 @@ h4 {
 
   .twitter-feed {
     padding: 0px;
-  }
-
-  .parallax-container h1 {
-    visibility: hidden;
   }
 
   .header-wrapper {

@@ -32,7 +32,8 @@ layout: home
             {% for post in site.posts limit:1 %}
                 <h4 class="preview-title">{{post.title}}</h4>
                 <p class="preview-detail">{{post.author}} | {{post.date | date: "%-d %B %Y"}}</p>
-                <p>{{post.excerpt}} <a href="{{ post.url }}">Read more</a></p>
+                <p>{{post.excerpt}}</p>
+                <p><a href="{{ post.url }}">Read more</a> &middot; <a href="/blog">View all posts</a> </p>
             {% endfor %}
         </div>
         <div class="twitter-feed">

@@ -32,7 +32,7 @@ layout: home
             {{ event.date | date: "%B, %Y" }}
             </h4>
             <p><i>Venue: {{event.venue}} | Cost: {{event.price}}</i></p>
-            <p>{{event.description}} {% if event.eventbrite %}<i><a href="{{event.eventbrite}}" target="_blank">Sign up to attend on EventBrite!</a></i>{% endif %}</p>
+            <p>{{event.description}} {% if event.eventbrite %}<i><a href="{{event.eventbrite}}" target="_blank"><br/>Sign up to attend on EventBrite!</a></i>{% endif %}</p>
         </div>
         {% endfor %}
 </div>
